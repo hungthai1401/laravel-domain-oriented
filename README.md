@@ -61,6 +61,10 @@ php artisan vendor:publish --provider="HT\LaravelDomainOriented\DomainServicePro
 ```bash
 php artisan domain:make Dummy
 ```
+4. And of course, if you want to remove the structure, just run this command:
+```bash
+php artisan domain:remove Dummy
+```
 
 ## Reading Articles
 1. [Domain oriented Laravel](https://stitcher.io/blog/laravel-beyond-crud-01-domain-oriented-laravel)
