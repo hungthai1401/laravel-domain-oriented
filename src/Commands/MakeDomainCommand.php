@@ -6,30 +6,14 @@ use HT\LaravelDomainOriented\Actions\CheckExistsDomainDirectoryAction;
 use HT\LaravelDomainOriented\Actions\CreateDomainDirectoryAction;
 use HT\LaravelDomainOriented\Actions\CreateRootDomainDirectoryAction;
 use HT\LaravelDomainOriented\Actions\GenerateDomainStructureAction;
-use HT\LaravelDomainOriented\Entities\Domain;
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
-use Symfony\Component\Console\Input\InputArgument;
 
-class MakeDomainCommand extends Command
+class MakeDomainCommand extends AbstractDomainCommand
 {
     /** @var string */
     protected $signature = 'domain:make {name : The domain name}';
 
     /** @var string */
     protected $description = 'Create a new domain structure.';
-
-    /** @var Filesystem|null */
-    protected ?Filesystem $file;
-
-    /**
-     * @param Filesystem $filesystem
-     */
-    public function __construct(Filesystem $filesystem)
-    {
-        parent::__construct();
-        $this->file = $filesystem;
-    }
 
     /**
      * @param CreateRootDomainDirectoryAction $createRootDomainDirectoryAction
@@ -42,12 +26,9 @@ class MakeDomainCommand extends Command
         CreateRootDomainDirectoryAction $createRootDomainDirectoryAction,
         CheckExistsDomainDirectoryAction $checkExistsDomainDirectoryAction,
         CreateDomainDirectoryAction $createDomainDirectoryAction,
-        GenerateDomainStructureAction $generateDomainStructureAction,
+        GenerateDomainStructureAction $generateDomainStructureAction
     ): void {
-        $domainName = $this->argument('name');
-
-        $domain = (new Domain())
-            ->setName($domainName);
+        $domain = $this->getDomain();
 
         $this->info("Creating {$domain->getName()} domain");
 
@@ -69,17 +50,5 @@ class MakeDomainCommand extends Command
         }
 
         $this->info("Created {$domain->getName()} domain");
-    }
-
-    /**
-     * Get the console command arguments.
-     *
-     * @return array
-     */
-    protected function getArguments(): array
-    {
-        return [
-            ['name', InputArgument::REQUIRED, 'The name of the domain',],
-        ];
     }
 }
