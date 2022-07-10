@@ -3,6 +3,7 @@
 namespace HT\LaravelDomainOriented;
 
 use HT\LaravelDomainOriented\Commands\MakeDomainCommand;
+use HT\LaravelDomainOriented\Commands\RemoveDomainCommand;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -29,6 +30,7 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->commands([
             MakeDomainCommand::class,
+            RemoveDomainCommand::class,
         ]);
     }
 }
