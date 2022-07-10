@@ -2,7 +2,7 @@
 This package builds a structure to domain-oriented (not DDD).
 
 ## Requirements
-- PHP 7.4, 8.0, 8.1
+- PHP 7.2+, 8.0, 8.1
 - Laravel 7.x, 8.x, 9.x
 
 ## Introduction
