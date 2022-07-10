@@ -55,7 +55,7 @@ composer require hungthai1401/laravel-domain-oriented --dev
 ```
 2. If you prefer, you can export the config files:
 ```bash
-php artisan vendor:publish --provider="HT\LaravelDomainOriented\DomainServiceProvider" --tag="config"
+php artisan vendor:publish --provider="HT\LaravelDomainOriented\ServiceProvider" --tag="config"
 ```
 3. Run this command to build the domain structure:
 ```bash
