@@ -1,0 +1,35 @@
+{
+    "name": "hungthai1401/laravel-domain-oriented",
+    "authors": [
+        {
+            "name": "Thai Nguyen Hung",
+            "email": "hungthai1401.it@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^7.3|^7.4|^8.0|^8.1"
+    },
+    "require-dev": {
+        "illuminate/console": "^7.0|^8.0|^9.0",
+        "illuminate/filesystem": "^7.0|^8.0|^9.0",
+        "illuminate/support": "^7.0|^8.0|^9.0",
+        "friendsofphp/php-cs-fixer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "HT\\LaravelDomainOriented\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HT\\LaravelDomainOriented\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "pcf": "vendor/bin/php-cs-fixer fix --verbose"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
