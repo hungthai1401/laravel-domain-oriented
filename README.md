@@ -51,7 +51,7 @@ database
 ## Setup
 1. Run this Composer command to install the latest version
 ```bash
-composer require hungthai1401/laravel-domain-oriented
+composer require hungthai1401/laravel-domain-oriented --dev
 ```
 2. If you prefer, you can export the config files:
 ```bash
