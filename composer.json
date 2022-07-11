@@ -1,5 +1,8 @@
 {
     "name": "hungthai1401/laravel-domain-oriented",
+    "description": "Build a domain-oriented application on Laravel Framework",
+    "license": "MIT",
+    "keywords": ["laravel", "domain oriented", "ddd"],
     "authors": [
         {
             "name": "Thai Nguyen Hung",
@@ -19,6 +22,9 @@
         "psr-4": {
             "HT\\LaravelDomainOriented\\": "src"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {

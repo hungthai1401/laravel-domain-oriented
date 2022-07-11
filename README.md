@@ -1,5 +1,5 @@
 # Laravel Domain Oriented
-This package builds a structure to domain-oriented (not DDD).
+This package builds a structure to domain-oriented application (not DDD).
 
 ## Requirements
 - PHP 7.2+, 8.0, 8.1
